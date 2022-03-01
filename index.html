@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praise Codes</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/3a703ae51a.js" crossorigin="anonymous"></script>
+    <script src="./scripts/typed.js"></script>
+    <script src="./scripts/main.js"></script>
+</head>
+<body>
+    <div id="top">
+        <h1>
+            Praise <span style="color: red;">Codes.</span>
+        </h1>
+
+        <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT</a></li>
+        </ul>
+
+        <button id="hire">HIRE ME</button>
+    </div><br/>
+
+    <div id="landing">
+        <h4>
+            HELLO WORLD!! I'M
+        </h>
+        <h1>
+            <span id="pcodes"></span>
+        </h1><br/>
+        <script>
+            var typed = new Typed("#pcodes", {
+                strings: [
+                    "A YOUNG DEVELOPER",
+                    "PRAISE CODES"
+                ],
+                typeSpeed: 80,
+                backSpeed: 80,
+                loop: false
+            })
+        </script>
+        <p>
+            I'm open to freelancing jobs<br/>Creating pixel perfect websites and distinguished apps.
+            <span style="color: red;">Bringing your ideas to life</span>.
+        </p>
+        <br/>
+        <button id="learn" onclick="moveScreen()">
+            READ MORE
+        </button>
+    </div><br/>
+
+    <div id="about">
+        <div id="NgPro">
+            <img src="./Images/NgFlag.png" alt="Nigeria Flag">
+            <h2 id="NgProH2">
+                ~Young Nigerian Programmer~<br/>
+                <span>Very Hard Working And Self-Taught Developer.<br/>
+                Young Nigerian, Very Skilled Too!!</span>
+            </h2>
+        </div>
+
+        <div id="OpenSource">
+            <h2 id="opensource">
+                ~Open Source Contributor~<br/>
+                <span>Programming for 2 years+</span>
+            </h2>
+            <i class="fa-solid fa-code-commit"></i>
+        </div>
+
+        <div id="desktop">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>
+                ~Desktop Applications Developer~<br/>
+                <span>(C++, C#)</span>
+            </h2>
+        </div>
+    </div>
+
+    <button id="backUp" onclick="scrollUp()">
+        &#x2191
+    </button>
+</body>
+</html>
