@@ -7,3 +7,7 @@ var typed = new Typed("#pcodes", {
     backSpeed: 80,
     loop: false
 })
+
+const moveScreen = () => {
+    
+}
