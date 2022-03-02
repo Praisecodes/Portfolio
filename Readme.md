@@ -13,4 +13,11 @@ So with the fact that I'm just learning JavaScript and getting into the whole th
 So I decided to switch from CSS to SCSS while working on this project, previously I used CSS, it was okay, not like anything was wrong with it.
 I switched to SCSS because, I don't know, it's my project and I can do whatever the fuck I want 😌.
 
-Besides switching to SCSS, I also eliminated all the code in my main.js file so I can recreate it. I removed all the animations I put in this website because they would be a big problem when I have to handle the responsiveness of the site
+Besides switching to SCSS, I also eliminated all the code in my main.js file so I can recreate it. I removed all the animations I put in this website because they would be a big problem when I have to handle the responsiveness of the site.
+I equally made the Read more button functional by adding a simple JavaScript function to it.
+
+```javascript
+document.getElementById('about').scrollIntoView({
+  behavior: 'smooth'
+});
+```
