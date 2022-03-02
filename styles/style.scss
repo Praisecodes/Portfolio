@@ -66,6 +66,7 @@ body{
                 text-decoration: none;
                 color: white;
                 transition: .5s;
+                cursor: pointer;
                 &:hover{
                     color: red;
                 }
@@ -131,7 +132,8 @@ body{
 
 #about{
     width: 100%;
-    height: 100vh;
+    height: 120vh;
+    overflow: hidden;
     #NgPro{
         width: 90%;
         display: flex;
@@ -161,7 +163,7 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 40px;
         h2{
             text-align: center;
             font-size: 25px;
@@ -185,7 +187,7 @@ body{
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 40px;
         .fa-laptop-code{
             width: 200px;
             height: 200px;
@@ -201,5 +203,33 @@ body{
                 font-size: 20px;
             }
         }
+    }
+}
+
+.tools{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    overflow: hidden;
+    h1{
+        font-size: 70px;
+        color: white;
+        font-family: "Roboto";
+        letter-spacing: 2px;
+    }
+    .toolsList{
+        width: 70%;
+        height: 100%;
+        border: 1px solid white;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        overflow: hidden;
     }
 }
