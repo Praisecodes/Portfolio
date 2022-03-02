@@ -46,6 +46,10 @@ body{
     flex-direction: row;
     width: 100%;
     margin: 1% 0 0 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #111;
     h1{
         margin: 0 0 0 2%;
         width: 30%;
