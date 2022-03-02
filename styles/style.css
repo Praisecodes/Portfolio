@@ -57,7 +57,7 @@ body {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #11111188;
 }
 
 #top h1 {
@@ -191,7 +191,7 @@ body {
 #about #NgPro h2 {
   text-align: center;
   font-size: 25px;
-  margin-left: 60px;
+  margin-left: 140px;
   color: #ffffffaa;
 }
 
