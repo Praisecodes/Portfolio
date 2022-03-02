@@ -124,3 +124,78 @@ body{
         }
     }
 }
+
+#about{
+    width: 100%;
+    height: 100vh;
+    #NgPro{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 280px;
+            height: 260px;
+        }
+        h2{
+            text-align: center;
+            font-size: 25px;
+            margin-left: 60px;
+            color: #ffffffaa;
+            span{
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+    #OpenSource{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        h2{
+            text-align: center;
+            font-size: 25px;
+            color: #ffffffaa;
+            span{
+                color: white;
+                font-size: 20px;
+            }
+        }
+        .fa-code-commit{
+            width: 200px;
+            height: 200px;
+            color: #f1502f;
+            margin-left: 150px;
+        }
+    }
+    #desktop{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+        .fa-laptop-code{
+            width: 200px;
+            height: 200px;
+            color: white;
+        }
+        h2{
+            text-align: center;
+            font-size: 25px;
+            color: #ffffffaa;
+            margin-left: 150px;
+            span{
+                color: white;
+                font-size: 20px;
+            }
+        }
+    }
+}
