@@ -9,5 +9,7 @@ var typed = new Typed("#pcodes", {
 })
 
 const moveScreen = () => {
-    
+  document.getElementById('about').scrollIntoView({
+    behavior: 'smooth'
+  });
 }
