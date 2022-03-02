@@ -13,3 +13,9 @@ const moveScreen = () => {
     behavior: 'smooth'
   });
 }
+
+const ToHome = () => {
+  document.getElementById('landing').scrollIntoView({
+    behavior: 'smooth'
+  });
+}
