@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../Assets/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../Assets/Roboto/Roboto-Medium.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #111;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: white;
+    overflow-x: hidden;
+    transition: 4s;
+    -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes fadeIn{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+#top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 1% 0 0 0;
+    h1{
+        margin: 0 0 0 2%;
+        width: 30%;
+    }
+    ul{
+        list-style-type: none;
+        font-size: 99%;
+        margin: 0 0 0 7%;
+        width: 27%;
+        li{
+            a{
+                float: left;
+                margin: 4% 0 0 8%;
+                text-decoration: none;
+                color: white;
+                transition: .5s;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    button{
+        margin: .3% 0 0 20%;
+        border: 0;
+        color: white;
+        background-color: #333333aa;
+        width: 10%;
+        height: 50px;
+        font-size: 20px;
+        font-family: "Roboto";
+        border-radius: 40px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            box-shadow: 0 0 1px 1px red;
+            background-color: #ff0000;
+        }
+    }
+}
+
+#landing{
+    width: 100%;
+    color: white;
+    font-family: "Roboto";
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h4{
+        letter-spacing: 4px;
+        color: #ffffffaa;
+        font-size: 120%;
+    }
+    h1{
+        font-size: 100px;
+        margin: 0 0 0 -1%;
+    }
+    button{
+        border: 0;
+        margin: 2% 0 0 0;
+        width: 15%;
+        height: 50px;
+        font-family: "Roboto";
+        color: white;
+        background-color: red;
+        border-radius: 40px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: .5s;
+        &:hover{
+            box-shadow: 0 0 1px 1px #ff000088;
+            background-color: #ff000088;
+        }
+    }
+}
