@@ -50,6 +50,7 @@ body{
     top: 0;
     left: 0;
     background-color: #11111188;
+    z-index: 1000;
     h1{
         margin: 0 0 0 2%;
         width: 30%;
@@ -136,11 +137,14 @@ body{
     overflow: hidden;
     #NgPro{
         width: 90%;
-        display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        transition: .8s;
+        animation: fadeIn 6s;
+        transform: translateY(60%);
         img{
             width: 280px;
             height: 260px;
@@ -158,12 +162,15 @@ body{
     }
     #OpenSource{
         width: 90%;
-        display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
+        transition: .8s;
+        animation: fadeIn 6s;
+        transform: translateY(60%);
         h2{
             text-align: center;
             font-size: 25px;
@@ -182,12 +189,15 @@ body{
     }
     #desktop{
         width: 90%;
-        display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
+        transition: .8s;
+        animation: fadeIn 6s;
+        transform: translateY(60%);
         .fa-laptop-code{
             width: 200px;
             height: 200px;
@@ -231,8 +241,10 @@ body{
         flex-wrap: wrap;
         align-items: center;
         overflow: hidden;
-        i.fa{
-            font-weight: 3rem;
+        i{
+            margin-left: 2%;
+            cursor: pointer;
+            font-size: 5rem;
         }
     }
 }

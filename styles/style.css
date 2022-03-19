@@ -58,6 +58,7 @@ body {
   top: 0;
   left: 0;
   background-color: #11111188;
+  z-index: 1000;
 }
 
 #top h1 {
@@ -168,9 +169,7 @@ body {
 
 #about #NgPro {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -183,6 +182,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-animation: fadeIn 6s;
+          animation: fadeIn 6s;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
 }
 
 #about #NgPro img {
@@ -204,9 +209,7 @@ body {
 
 #about #OpenSource {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -220,6 +223,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 40px;
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-animation: fadeIn 6s;
+          animation: fadeIn 6s;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
 }
 
 #about #OpenSource h2 {
@@ -242,9 +251,7 @@ body {
 
 #about #desktop {
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -258,6 +265,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 40px;
+  -webkit-transition: .8s;
+  transition: .8s;
+  -webkit-animation: fadeIn 6s;
+          animation: fadeIn 6s;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
 }
 
 #about #desktop .fa-laptop-code {
@@ -321,5 +334,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+}
+
+.tools .toolsList i {
+  margin-left: 2%;
+  cursor: pointer;
+  font-size: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
