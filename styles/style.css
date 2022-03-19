@@ -336,9 +336,9 @@ body {
   overflow: hidden;
 }
 
-.tools .toolsList i {
+.tools .toolsList .fa-html5, .tools .toolsList .fa-css3-alt, .tools .toolsList .fa-js {
   margin-left: 2%;
   cursor: pointer;
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 /*# sourceMappingURL=style.css.map */
