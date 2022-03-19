@@ -336,9 +336,9 @@ body {
   overflow: hidden;
 }
 
-.tools .toolsList .fa-html5, .tools .toolsList .fa-css3-alt, .tools .toolsList .fa-js {
+.tools .toolsList .fa-html5, .tools .toolsList .fa-css3-alt, .tools .toolsList .fa-js, .tools .toolsList .fa-font-awesome, .tools .toolsList .si-netlify {
   margin-left: 2%;
   cursor: pointer;
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=style.css.map */
