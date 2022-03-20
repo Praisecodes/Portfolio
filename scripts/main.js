@@ -1,6 +1,8 @@
 const desktop = document.getElementById("desktop");
 const NgPro = document.getElementById("NgPro");
 const OpenSource = document.getElementById("OpenSource");
+const topBtn = document.querySelector(".top");
+const readmore = document.getElementById("learn");
 
 var typed = new Typed("#pcodes", {
     strings: [
@@ -12,17 +14,29 @@ var typed = new Typed("#pcodes", {
     loop: false
 })
 
-const moveScreen = () => {
+// const moveScreen = () => {
+//   document.getElementById('about').scrollIntoView({
+//     behavior: 'smooth'
+//   });
+// }
+
+readmore.onclick = () =>{
   document.getElementById('about').scrollIntoView({
     behavior: 'smooth'
   });
 }
 
-const ToHome = () => {
+topBtn.addEventListener('click', () =>{
   document.getElementById('landing').scrollIntoView({
     behavior: 'smooth'
   });
-}
+})
+
+// const ToHome = () => {
+//   document.getElementById('landing').scrollIntoView({
+//     behavior: 'smooth'
+//   });
+// }
 
 window.onscroll = () => {
   if(window.scrollY >=180){
