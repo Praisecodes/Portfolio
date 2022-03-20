@@ -3,6 +3,9 @@ const NgPro = document.getElementById("NgPro");
 const OpenSource = document.getElementById("OpenSource");
 const topBtn = document.querySelector(".top");
 const readmore = document.getElementById("learn");
+const aboutNav = document.querySelector(".aboutNav");
+const homeNav = document.querySelector(".homeNav");
+
 
 var typed = new Typed("#pcodes", {
     strings: [
@@ -12,13 +15,19 @@ var typed = new Typed("#pcodes", {
     typeSpeed: 80,
     backSpeed: 80,
     loop: false
-})
+});
 
 // const moveScreen = () => {
 //   document.getElementById('about').scrollIntoView({
 //     behavior: 'smooth'
 //   });
 // }
+
+aboutNav.addEventListener('click', () => {
+  document.getElementById('about').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
 
 readmore.onclick = () =>{
   document.getElementById('about').scrollIntoView({
@@ -37,6 +46,12 @@ topBtn.addEventListener('click', () =>{
 //     behavior: 'smooth'
 //   });
 // }
+
+homeNav.addEventListener('click', () => {
+  document.getElementById('landing').scrollIntoView({
+    behavior: 'smooth'
+  });
+});
 
 window.onscroll = () => {
   if(window.scrollY >=180){
