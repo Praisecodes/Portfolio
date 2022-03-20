@@ -52,7 +52,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  margin: 1% 0 0 0;
+  margin: 0 0 0 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

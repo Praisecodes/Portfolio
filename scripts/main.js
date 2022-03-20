@@ -25,7 +25,7 @@ const ToHome = () => {
 }
 
 window.onscroll = () => {
-  if(window.scrollY >=130){
+  if(window.scrollY >=180){
     document.querySelector(".top").style.transform = "translateX(0%)";
   }
   else{
