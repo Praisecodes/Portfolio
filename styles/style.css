@@ -59,6 +59,7 @@ body {
   left: 0;
   background-color: #11111188;
   z-index: 1000;
+  padding-top: 2px;
 }
 
 #top h1 {
