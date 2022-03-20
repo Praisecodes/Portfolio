@@ -133,7 +133,7 @@ body{
 
 #about{
     width: 100%;
-    height: 120vh;
+    //height: 120vh;
     overflow: hidden;
     #NgPro{
         width: 90%;
@@ -218,7 +218,7 @@ body{
 
 .tools{
     width: 100%;
-    height: 50vh;
+    height: fit-content;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -253,7 +253,7 @@ body{
             font-size: 3.2rem;
         }
         .si-cplusplus{
-            margin-left: -2px;
+            font-size: 3.2rem;
         }
     }
 }

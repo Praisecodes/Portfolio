@@ -163,7 +163,6 @@ body {
 
 #about {
   width: 100%;
-  height: 120vh;
   overflow: hidden;
 }
 
@@ -293,7 +292,9 @@ body {
 
 .tools {
   width: 100%;
-  height: 50vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,7 +355,7 @@ body {
 }
 
 .tools .toolsList .si-cplusplus {
-  margin-left: -2px;
+  font-size: 3.2rem;
 }
 
 .top {

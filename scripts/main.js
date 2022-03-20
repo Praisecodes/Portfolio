@@ -17,12 +17,6 @@ var typed = new Typed("#pcodes", {
     loop: false
 });
 
-// const moveScreen = () => {
-//   document.getElementById('about').scrollIntoView({
-//     behavior: 'smooth'
-//   });
-// }
-
 aboutNav.addEventListener('click', () => {
   document.getElementById('about').scrollIntoView({
     behavior: 'smooth'
@@ -40,12 +34,6 @@ topBtn.addEventListener('click', () =>{
     behavior: 'smooth'
   });
 })
-
-// const ToHome = () => {
-//   document.getElementById('landing').scrollIntoView({
-//     behavior: 'smooth'
-//   });
-// }
 
 homeNav.addEventListener('click', () => {
   document.getElementById('landing').scrollIntoView({
