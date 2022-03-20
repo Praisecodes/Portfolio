@@ -512,6 +512,56 @@ body {
   background-color: #ff000088;
 }
 
+.contact .socialDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.contact .socialDiv ul {
+  list-style-type: none;
+}
+
+.contact .socialDiv ul li {
+  float: left;
+}
+
+.contact .socialDiv ul li a {
+  text-decoration: none;
+}
+
+.contact .socialDiv ul li a .social {
+  font-size: 35px;
+  margin: 5px 0 10px 35px;
+}
+
+.foot {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: transparent;
+  font-size: 14px;
+}
+
 .top {
   border: 0;
   outline: 0;
