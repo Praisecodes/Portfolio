@@ -320,7 +320,6 @@ body {
   width: 70%;
   height: 100%;
   border: 1px solid white;
-  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,11 +332,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
 .tools .toolsList .icons {
-  margin-left: 2%;
+  margin-left: 30px;
   cursor: pointer;
   font-size: 3.2rem;
 }

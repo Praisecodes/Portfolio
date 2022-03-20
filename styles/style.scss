@@ -235,14 +235,15 @@ body{
         width: 70%;
         height: 100%;
         border: 1px solid white;
-        margin-top: 10px;
+        //margin-top: 10px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
         overflow: hidden;
         .icons{
-            margin-left: 2%;
+            margin-left: 30px;
             cursor: pointer;
             font-size: 3.2rem;
         }
