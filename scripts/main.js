@@ -25,6 +25,12 @@ const ToHome = () => {
 }
 
 window.onscroll = () => {
+  if(window.scrollY >=130){
+    document.querySelector(".top").style.transform = "translateX(0%)";
+  }
+  else{
+    document.querySelector(".top").style.transform = "translateX(100%)";
+  }
   if(window.scrollY >= 100){
     NgPro.style.display = "flex";
     setTimeout(()=>{
