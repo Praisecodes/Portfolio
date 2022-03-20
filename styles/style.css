@@ -400,6 +400,12 @@ body {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .contact .formsDiv .write-a-message {
@@ -444,6 +450,66 @@ body {
   height: 50px;
   font-family: "Poppins";
   margin: 5px 0 2px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.contact .formsDiv .write-a-message button:hover {
+  background-color: #ff000088;
+}
+
+.contact .formsDiv h1 {
+  font-size: 50px;
+}
+
+.contact .formsDiv .leave-a-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .formsDiv .leave-a-review input {
+  width: 350px;
+  height: 40px;
+  outline: 0;
+  border: none;
+  margin: 5px 0 2px 0;
+  font-size: 15px;
+  font-family: "Poppins";
+  padding: 4px;
+}
+
+.contact .formsDiv .leave-a-review textarea {
+  width: 353px;
+  height: 350px;
+  outline: 0;
+  border: none;
+  margin: 5px 0 2px 0;
+  font-size: 15px;
+  font-family: "Roboto";
+  padding: 3px;
+}
+
+.contact .formsDiv .leave-a-review button {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  height: 50px;
+  font-family: "Poppins";
+  margin: 5px 0 2px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.contact .formsDiv .leave-a-review button:hover {
+  background-color: #ff000088;
 }
 
 .top {
