@@ -258,6 +258,67 @@ body{
     }
 }
 
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    .title{
+        font-size: 60px;
+        letter-spacing: 2px;
+        &::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            display: block;
+        }
+    }
+    .formsDiv{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .write-a-message{
+            display: flex;
+            flex-direction: column;
+            input{
+                width: 350px;
+                height: 40px;
+                outline: 0;
+                border: none;
+                margin: 5px 0 2px 0;
+                font-size: 15px;
+                font-family: "Poppins";
+                padding: 4px;
+            }
+            textarea{
+                width: 353px;
+                height: 350px;
+                outline: 0;
+                border: none;
+                margin: 5px 0 2px 0;
+                font-size: 15px;
+                font-family: "Roboto";
+                padding: 3px;
+            }
+            button{
+                background-color: red;
+                color: white;
+                font-size: 18px;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                height: 50px;
+                font-family: "Poppins";
+                margin: 5px 0 2px 0;
+            }
+        }
+    }
+}
+
 .top{
     border: 0;
     outline: 0;

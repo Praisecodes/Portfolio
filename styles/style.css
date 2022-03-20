@@ -358,6 +358,94 @@ body {
   font-size: 3.2rem;
 }
 
+.contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .title {
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+
+.contact .title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  display: block;
+}
+
+.contact .formsDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .formsDiv .write-a-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .formsDiv .write-a-message input {
+  width: 350px;
+  height: 40px;
+  outline: 0;
+  border: none;
+  margin: 5px 0 2px 0;
+  font-size: 15px;
+  font-family: "Poppins";
+  padding: 4px;
+}
+
+.contact .formsDiv .write-a-message textarea {
+  width: 353px;
+  height: 350px;
+  outline: 0;
+  border: none;
+  margin: 5px 0 2px 0;
+  font-size: 15px;
+  font-family: "Roboto";
+  padding: 3px;
+}
+
+.contact .formsDiv .write-a-message button {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  height: 50px;
+  font-family: "Poppins";
+  margin: 5px 0 2px 0;
+}
+
 .top {
   border: 0;
   outline: 0;
