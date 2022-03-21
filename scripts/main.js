@@ -5,7 +5,53 @@ const topBtn = document.querySelector(".top");
 const readmore = document.getElementById("learn");
 const aboutNav = document.querySelector(".aboutNav");
 const homeNav = document.querySelector(".homeNav");
+const mobileNav = document.querySelector(".mobileNav");
+const NavBtn = document.querySelector(".navBtn");
+const Nav = document.querySelector(".Nav");
 
+let startY, startX, TotalFingerSwipeDist = 150, allowedTime = 3000, distance, ellapsedTime, startTime;
+
+const swipe = (swiperight, swipeleft) => {
+  if(swiperight){
+    Nav.style.transform = 'translate(200%)';
+    setTimeout(() => {
+      mobileNav.style.display = 'none';
+    },500);
+  }else{
+    if(swipeleft){
+      mobileNav.style.display = 'block';
+      setTimeout(()=>{
+        Nav.style.transform = 'translate(0%)';
+      },100);
+    }
+  }
+}
+
+document.ontouchstart = (e) => {
+  let touchobj = e.changedTouches[0];
+  startX = touchobj.pageX;
+  startY = touchobj.pageY;
+  distance = 0;
+  startTime = new Date().getTime();
+  e.preventDefault();
+}
+
+document.ontouchmove = (e) => {
+  e.preventDefault();
+}
+
+document.ontouchend = (e) => {
+  let touchobj = e.changedTouches[0];
+  distance = touchobj.pageX - startX;
+  ellapsedTime = new Date().getTime() - startTime;
+  let swiperightBol = (ellapsedTime<=allowedTime && distance >= TotalFingerSwipeDist && 
+    Math.abs(touchobj.pageY - startY)<=100);
+
+  let swipeleftBol = (ellapsedTime <= allowedTime && distance<=TotalFingerSwipeDist &&
+    Math.abs(touchobj.pageY - startY) <=100);
+  
+  swipe(swiperightBol,swipeleftBol);
+}
 
 var typed = new Typed("#pcodes", {
     strings: [
@@ -68,3 +114,10 @@ window.onscroll = () => {
     
   }
 }
+
+NavBtn.addEventListener('click', () => {
+  mobileNav.style.display = 'block';
+  setTimeout(() => {
+    Nav.style.transform = 'translate(0%)';
+  }, 100);
+});

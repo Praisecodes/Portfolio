@@ -52,8 +52,8 @@ body {
   background-color: #11111133;
   z-index: 2000;
   display: none;
-  -webkit-animation: fadeIn .8s;
-          animation: fadeIn .8s;
+  -webkit-animation: fadeIn .1s;
+          animation: fadeIn .1s;
 }
 
 .mobileNav .Nav {
@@ -71,6 +71,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .mobileNav .Nav ul {
