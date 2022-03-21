@@ -52,25 +52,22 @@ body{
     display: none;
     animation: fadeIn .1s;
     .Nav{
-        width: 75%;
+        width: 75vw;
         height: 100%;
         background-color: #11111188;
-        margin-left: 25%;
+        margin-left: 25vw;
         display: flex;
         align-items: center;
         flex-direction: column;
         transform: translateX(200%);
         transition: .5s;
-        position: relative;
         .close{
             color: red;
             font-size: 30px;
-            position: absolute;
-            right: 2px;
-            top: 0;
             background-color: transparent;
             height: 40px;
             width: 40px;
+            margin-left: calc(75vw - 70px);
             &:hover{
                 box-shadow: none;
                 background-color: transparent;

@@ -57,10 +57,10 @@ body {
 }
 
 .mobileNav .Nav {
-  width: 75%;
+  width: 75vw;
   height: 100%;
   background-color: #11111188;
-  margin-left: 25%;
+  margin-left: 25vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,18 +75,15 @@ body {
           transform: translateX(200%);
   -webkit-transition: .5s;
   transition: .5s;
-  position: relative;
 }
 
 .mobileNav .Nav .close {
   color: red;
   font-size: 30px;
-  position: absolute;
-  right: 2px;
-  top: 0;
   background-color: transparent;
   height: 40px;
   width: 40px;
+  margin-left: calc(75vw - 70px);
 }
 
 .mobileNav .Nav .close:hover {
