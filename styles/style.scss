@@ -214,6 +214,10 @@ body{
 #about{
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     #NgPro{
         width: 90%;
         display: none;
@@ -368,6 +372,7 @@ body{
         .write-a-message{
             display: flex;
             flex-direction: column;
+            transition: .5s;
             input{
                 width: 350px;
                 height: 40px;
@@ -412,6 +417,7 @@ body{
         .leave-a-review{
             display: flex;
             flex-direction: column;
+            transition: .5s;
             input{
                 width: 350px;
                 height: 40px;
@@ -530,6 +536,17 @@ body{
             flex-direction: column-reverse;
             .fa-code-commit{
                 margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 790px){
+    .contact{
+        .formsDiv{
+            flex-direction: column;
+            h1{
+                margin: 30px 0;
             }
         }
     }
