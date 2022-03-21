@@ -49,7 +49,7 @@ document.ontouchend = (e) => {
     Math.abs(touchobj.pageY - startY)<=100);
 
   let swipeleftBol = (ellapsedTime <= allowedTime && (distance <= TotalFingerSwipeDist && distance != 0) &&
-    Math.abs(touchobj.pageY - startY) <=20);
+    Math.abs(touchobj.pageY - startY) <=5);
   
   swipe(swiperightBol,swipeleftBol);
 }
