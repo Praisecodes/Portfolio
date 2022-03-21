@@ -761,5 +761,49 @@ body {
   .contact .formsDiv h1 {
     margin: 30px 0;
   }
+  #landing h1 {
+    font-size: 70px;
+    margin: 0;
+  }
+  #landing h4 {
+    font-size: 100%;
+  }
+  .tools h1 {
+    font-size: 50px;
+  }
+  .tools .toolsList .icons {
+    font-size: 3rem;
+  }
+  .contact .title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 495px) {
+  #landing h1 {
+    font-size: 50px;
+  }
+  #landing h4 {
+    font-size: 80%;
+  }
+  #landing p {
+    font-size: 18px;
+  }
+  #about #NgPro img {
+    width: 250px;
+    height: 230px;
+  }
+  #about #NgPro h2 {
+    font-size: 20px;
+  }
+  #about #NgPro h2 span {
+    font-size: 15px;
+  }
+  #about #OpenSource h2, #about #desktop h2 {
+    font-size: 20px;
+  }
+  #about #OpenSource h2 span, #about #desktop h2 span {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

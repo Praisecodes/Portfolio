@@ -61,7 +61,7 @@ var typed = new Typed("#pcodes", {
     ],
     typeSpeed: 80,
     backSpeed: 80,
-    loop: false
+    loop: true
 });
 
 aboutNav.addEventListener('click', () => {

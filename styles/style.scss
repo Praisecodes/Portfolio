@@ -550,4 +550,65 @@ body{
             }
         }
     }
+    #landing{
+        h1{
+            font-size: 70px;
+            margin: 0;
+        }
+        h4{
+            font-size: 100%;
+        }
+    }
+    .tools{
+        h1{
+            font-size: 50px;
+        }
+        .toolsList{
+            .icons{
+                font-size: 3rem;
+            }
+        }
+    }
+    .contact{
+        .title{
+            font-size: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 495px){
+    #landing{
+        h1{
+            font-size: 50px;
+        }
+        h4{
+            font-size: 80%;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+    #about{
+        #NgPro{
+            img{
+                width: 250px;
+                height: 230px;
+            }
+            h2{
+                font-size: 20px;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        #OpenSource, #desktop{
+            h2{
+                font-size: 20px;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
 }
