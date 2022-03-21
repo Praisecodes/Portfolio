@@ -612,3 +612,47 @@ body{
         }
     }
 }
+
+@media screen and (max-width: 420px){
+    #top{
+        h1{
+            font-size: 150%;
+        }
+    }
+    #about{
+        #NgPro{
+            img{
+                width: 200px;
+                height: 180px;
+            }
+        }
+    }
+
+    .contact{
+        .title{
+            letter-spacing: 0;
+            font-size: 45px;
+        }
+        .formsDiv{
+            .write-a-message, .leave-a-review{
+                input{
+                    width: 300px;
+                }
+                textarea{
+                    width: 303px;
+                }
+            }
+        }
+        .socialDiv{
+            ul{
+                li{
+                    a{
+                        .social{
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

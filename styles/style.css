@@ -806,4 +806,27 @@ body {
     font-size: 15px;
   }
 }
+
+@media screen and (max-width: 420px) {
+  #top h1 {
+    font-size: 150%;
+  }
+  #about #NgPro img {
+    width: 200px;
+    height: 180px;
+  }
+  .contact .title {
+    letter-spacing: 0;
+    font-size: 45px;
+  }
+  .contact .formsDiv .write-a-message input, .contact .formsDiv .leave-a-review input {
+    width: 300px;
+  }
+  .contact .formsDiv .write-a-message textarea, .contact .formsDiv .leave-a-review textarea {
+    width: 303px;
+  }
+  .contact .socialDiv ul li a .social {
+    font-size: 25px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
