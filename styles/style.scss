@@ -155,6 +155,7 @@ body{
         border-radius: 0;
         font-size: 30px;
         display: none;
+        background-color: transparent;
     }
 }
 
@@ -198,7 +199,6 @@ body{
 
 #about{
     width: 100%;
-    //height: 120vh;
     overflow: hidden;
     #NgPro{
         width: 90%;
@@ -229,7 +229,7 @@ body{
         width: 90%;
         display: none;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
@@ -312,13 +312,16 @@ body{
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        text-align: center;
         overflow: hidden;
         .icons{
-            margin: 20px 0 20px 50px;
-            font-size: 3.2rem;
+            margin: 20px 0 20px 30px;
+            font-size: 3.6rem;
         }
         .si-cplusplus{
-            font-size: 3.2rem;
+            font-size: 3.6rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 }
@@ -484,5 +487,36 @@ body{
     transform: translateX(100%);
     &:hover{
         color: red;
+    }
+}
+
+// Handling Responsiveness
+@media screen and (max-width: 1075px){
+    #top{
+        justify-content: space-between;
+        ul, button{
+            display: none;
+        }
+        .navBtn{
+            display: block;
+            margin-right: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 990px){
+    #about{
+        #NgPro, #desktop{
+            flex-direction: column;
+            h2{
+                margin-left: 0;
+            }
+        }
+        #OpenSource{
+            flex-direction: column-reverse;
+            .fa-code-commit{
+                margin-left: 0;
+            }
+        }
     }
 }

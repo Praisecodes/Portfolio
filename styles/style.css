@@ -193,6 +193,7 @@ body {
   border-radius: 0;
   font-size: 30px;
   display: none;
+  background-color: transparent;
 }
 
 #landing {
@@ -300,8 +301,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -433,16 +434,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   overflow: hidden;
 }
 
 .tools .toolsList .icons {
-  margin: 20px 0 20px 50px;
-  font-size: 3.2rem;
+  margin: 20px 0 20px 30px;
+  font-size: 3.6rem;
 }
 
 .tools .toolsList .si-cplusplus {
-  font-size: 3.2rem;
+  font-size: 3.6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contact {
@@ -673,5 +677,41 @@ body {
 
 .top:hover {
   color: red;
+}
+
+@media screen and (max-width: 1075px) {
+  #top {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #top ul, #top button {
+    display: none;
+  }
+  #top .navBtn {
+    display: block;
+    margin-right: 5px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #about #NgPro, #about #desktop {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about #NgPro h2, #about #desktop h2 {
+    margin-left: 0;
+  }
+  #about #OpenSource {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #about #OpenSource .fa-code-commit {
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
