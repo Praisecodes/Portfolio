@@ -41,6 +41,63 @@ body{
     }
 }
 
+.mobileNav{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #11111133;
+    z-index: 2000;
+    display: none;
+    animation: fadeIn .8s;
+    .Nav{
+        width: 75%;
+        height: 100%;
+        background-color: #11111188;
+        margin-left: 25%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        ul{
+            background-color: transparent;
+            list-style-type: none;
+            width: 100%;
+            li{
+                color: white;
+                width: 100%;
+                height: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+                padding-left: 8px;
+                display: flex;
+                align-items: center;
+                transition: .5s;
+                &:hover{
+                    background-color: #ffffff22;
+                    color: red;
+                }
+            }
+        }
+        button{
+            border: 0;
+            color: white;
+            background-color: #333333aa;
+            width: 130px;
+            height: 50px;
+            font-size: 20px;
+            font-family: "Roboto";
+            border-radius: 40px;
+            cursor: pointer;
+            transition: .3s;
+            &:hover{
+                box-shadow: 0 0 1px 1px red;
+                background-color: #ff0000;
+            }
+        }
+    }
+}
+
 #top{
     display: flex;
     flex-direction: row;
@@ -80,7 +137,7 @@ body{
         border: 0;
         color: white;
         background-color: #333333aa;
-        width: 10%;
+        width: 130px;
         height: 50px;
         font-size: 20px;
         font-family: "Roboto";
@@ -91,6 +148,13 @@ body{
             box-shadow: 0 0 1px 1px red;
             background-color: #ff0000;
         }
+    }
+    .navBtn{
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+        font-size: 30px;
+        display: none;
     }
 }
 
@@ -116,7 +180,7 @@ body{
     button{
         border: 0;
         margin: 2% 0 0 0;
-        width: 15%;
+        width: 180px;
         height: 50px;
         font-family: "Roboto";
         color: white;
