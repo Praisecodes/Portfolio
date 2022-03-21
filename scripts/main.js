@@ -8,6 +8,7 @@ const homeNav = document.querySelector(".homeNav");
 const mobileNav = document.querySelector(".mobileNav");
 const NavBtn = document.querySelector(".navBtn");
 const Nav = document.querySelector(".Nav");
+const close = document.querySelector(".close");
 
 let startY, startX, TotalFingerSwipeDist = 100, allowedTime = 3000, distance, ellapsedTime, startTime;
 
@@ -120,4 +121,11 @@ NavBtn.addEventListener('click', () => {
   setTimeout(() => {
     Nav.style.transform = 'translate(0%)';
   }, 100);
+});
+
+close.addEventListener('click', () =>{
+  Nav.style.transform = 'translate(200%)';
+  setTimeout(() => {
+    mobileNav.style.display = 'none';
+  }, 500);
 });

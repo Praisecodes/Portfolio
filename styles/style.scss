@@ -61,6 +61,21 @@ body{
         flex-direction: column;
         transform: translateX(200%);
         transition: .5s;
+        position: relative;
+        .close{
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            right: 2px;
+            top: 0;
+            background-color: transparent;
+            height: 40px;
+            width: 40px;
+            &:hover{
+                box-shadow: none;
+                background-color: transparent;
+            }
+        }
         ul{
             background-color: transparent;
             list-style-type: none;

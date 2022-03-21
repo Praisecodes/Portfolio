@@ -75,6 +75,24 @@ body {
           transform: translateX(200%);
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
+}
+
+.mobileNav .Nav .close {
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  right: 2px;
+  top: 0;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+}
+
+.mobileNav .Nav .close:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
 }
 
 .mobileNav .Nav ul {
