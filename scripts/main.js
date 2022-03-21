@@ -9,7 +9,7 @@ const mobileNav = document.querySelector(".mobileNav");
 const NavBtn = document.querySelector(".navBtn");
 const Nav = document.querySelector(".Nav");
 
-let startY, startX, TotalFingerSwipeDist = 150, allowedTime = 3000, distance, ellapsedTime, startTime;
+let startY, startX, TotalFingerSwipeDist = 100, allowedTime = 3000, distance, ellapsedTime, startTime;
 
 const swipe = (swiperight, swipeleft) => {
   if(swiperight){
@@ -47,8 +47,8 @@ document.ontouchend = (e) => {
   let swiperightBol = (ellapsedTime<=allowedTime && distance >= TotalFingerSwipeDist && 
     Math.abs(touchobj.pageY - startY)<=100);
 
-  let swipeleftBol = (ellapsedTime <= allowedTime && distance<=TotalFingerSwipeDist &&
-    Math.abs(touchobj.pageY - startY) <=100);
+  let swipeleftBol = (ellapsedTime <= allowedTime && (distance <= TotalFingerSwipeDist && distance != 0) &&
+    Math.abs(touchobj.pageY - startY) <=20);
   
   swipe(swiperightBol,swipeleftBol);
 }
