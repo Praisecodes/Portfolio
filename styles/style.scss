@@ -218,6 +218,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #151515;
+    padding: 10px 0;
     #NgPro{
         width: 90%;
         display: none;
@@ -351,6 +353,8 @@ body{
     color: white;
     align-items: center;
     justify-content: center;
+    background-color: #191919;
+    padding: 10px 0;
     .title{
         font-size: 60px;
         letter-spacing: 2px;
@@ -412,6 +416,7 @@ body{
 
         h1{
             font-size: 50px;
+            color: red;
         }
 
         .leave-a-review{

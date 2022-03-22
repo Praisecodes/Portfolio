@@ -284,6 +284,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #151515;
+  padding: 10px 0;
 }
 
 #about #NgPro {
@@ -497,6 +499,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #191919;
+  padding: 10px 0;
 }
 
 .contact .title {
@@ -585,6 +589,7 @@ body {
 
 .contact .formsDiv h1 {
   font-size: 50px;
+  color: red;
 }
 
 .contact .formsDiv .leave-a-review {

@@ -10,7 +10,7 @@ const NavBtn = document.querySelector(".navBtn");
 const Nav = document.querySelector(".Nav");
 const close = document.querySelector(".close");
 
-let startY, startX, TotalFingerSwipeDist = 100, allowedTime = 3000, distance, ellapsedTime, startTime;
+let startY, startX, TotalFingerSwipeDist = 200, allowedTime = 3000, distance, ellapsedTime, startTime;
 
 const swipe = (swiperight, swipeleft) => {
   if(swiperight){
@@ -18,12 +18,14 @@ const swipe = (swiperight, swipeleft) => {
     setTimeout(() => {
       mobileNav.style.display = 'none';
     },500);
+    body.style.overflow = 'auto';
   }else{
     if(swipeleft){
       mobileNav.style.display = 'block';
       setTimeout(()=>{
         Nav.style.transform = 'translate(0%)';
       },100);
+      body.style.overflow = 'hidden';
     }
   }
 }
@@ -45,7 +47,7 @@ document.ontouchend = (e) => {
   let touchobj = e.changedTouches[0];
   distance = touchobj.pageX - startX;
   ellapsedTime = new Date().getTime() - startTime;
-  let swiperightBol = (ellapsedTime<=allowedTime && distance >= TotalFingerSwipeDist && 
+  let swiperightBol = (ellapsedTime<=allowedTime && distance >= 40 && 
     Math.abs(touchobj.pageY - startY)<=100);
 
   let swipeleftBol = (ellapsedTime <= allowedTime && (distance <= TotalFingerSwipeDist && distance != 0) &&
@@ -61,7 +63,7 @@ var typed = new Typed("#pcodes", {
     ],
     typeSpeed: 80,
     backSpeed: 80,
-    loop: true
+    loop: false
 });
 
 aboutNav.addEventListener('click', () => {
@@ -121,6 +123,7 @@ NavBtn.addEventListener('click', () => {
   setTimeout(() => {
     Nav.style.transform = 'translate(0%)';
   }, 100);
+  body.style.overflow = 'hidden';
 });
 
 close.addEventListener('click', () =>{
@@ -128,4 +131,5 @@ close.addEventListener('click', () =>{
   setTimeout(() => {
     mobileNav.style.display = 'none';
   }, 500);
+  body.style.overflow = 'auto';
 });
