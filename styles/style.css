@@ -1000,6 +1000,7 @@ body {
   }
   .successDiv .successMessage {
     height: 40rem;
+    width: 25rem;
   }
   .NameEmpty p, .EmailEmpty p, .NoneAtAll p {
     height: 50px;
@@ -1031,6 +1032,9 @@ body {
   }
   #about #OpenSource h2 span, #about #desktop h2 span {
     font-size: 15px;
+  }
+  .successDiv .successMessage {
+    height: 35rem;
   }
 }
 

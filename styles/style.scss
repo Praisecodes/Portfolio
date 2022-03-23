@@ -707,6 +707,7 @@ body{
     .successDiv{
         .successMessage{
             height: 40rem;
+            width: 35rem;
         }
     }
     .NameEmpty, .EmailEmpty, .NoneAtAll{
@@ -750,6 +751,12 @@ body{
                 }
             }
         }
+    }
+    
+    .successDiv {
+      .successMessage {
+        height: 35rem;
+      }
     }
 }
 
