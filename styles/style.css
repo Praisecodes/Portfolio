@@ -83,8 +83,8 @@ body {
             transform: scale(110%);
   }
   100% {
-    -webkit-transform: scale(0%);
-            transform: scale(0%);
+    -webkit-transform: scale(40%);
+            transform: scale(40%);
   }
 }
 
@@ -94,8 +94,8 @@ body {
             transform: scale(110%);
   }
   100% {
-    -webkit-transform: scale(0%);
-            transform: scale(0%);
+    -webkit-transform: scale(40%);
+            transform: scale(40%);
   }
 }
 
@@ -168,10 +168,18 @@ body {
 }
 
 .successDiv .successMessage .image {
-  width: 10rem;
-  height: 10rem;
+  width: 13rem;
+  height: 13rem;
   border-radius: 50px;
-  border: 1px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .successDiv .successMessage .message h1, .successDiv .successMessage .message p {
