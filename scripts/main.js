@@ -9,6 +9,14 @@ const mobileNav = document.querySelector(".mobileNav");
 const NavBtn = document.querySelector(".navBtn");
 const Nav = document.querySelector(".Nav");
 const close = document.querySelector(".close");
+const writeName = document.querySelector(".writeName");
+const writeEmail = document.querySelector(".writeEmail");
+const writeMessage = document.querySelector('.writeMessage');
+const writeButton =document.querySelector('.writeButton');
+
+const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
+
+const chatID = `1967738166`;
 
 let startY, startX, TotalFingerSwipeDist = 200, allowedTime = 3000, distance, ellapsedTime, startTime;
 
@@ -132,4 +140,25 @@ close.addEventListener('click', () =>{
     mobileNav.style.display = 'none';
   }, 500);
   body.style.overflow = 'auto';
+});
+
+writeButton.addEventListener('click', ()=>{
+  let NameValue = writeName.value;
+  let EmailValue = writeEmail.value;
+  let MessageContent = writeMessage.value;
+  //let newline = "\n";
+  
+  let FinalMessage = "From: " + NameValue + '\r\n' + "E-Mail: " + EmailValue + '\r\n' + "Message Body: " + MessageContent;
+                      
+  fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
+    method: "GET"
+  })
+  .then(success => {
+    alert('Message Sent');
+    writeName.value = '';
+    writeEmail.value ='';
+    writeMessage.value = '';
+  }, error =>{
+    alert('Error sending message!');
+  });
 });
