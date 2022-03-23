@@ -29,22 +29,23 @@ const chatID = `1967738166`;
 
 let startY, startX, TotalFingerSwipeDist = 200, allowedTime = 3000, distance, ellapsedTime, startTime;
 
-const swipe = (swiperight, swipeleft) => {
+const swipe = (swiperight) => {
   if(swiperight){
     Nav.style.transform = 'translate(200%)';
     setTimeout(() => {
       mobileNav.style.display = 'none';
     },500);
     body.style.overflow = 'auto';
-  }else{
-    if(swipeleft){
-      mobileNav.style.display = 'block';
-      setTimeout(()=>{
-        Nav.style.transform = 'translate(0%)';
-      },100);
-      body.style.overflow = 'hidden';
-    }
   }
+  // else{
+  //   if(swipeleft){
+  //     mobileNav.style.display = 'block';
+  //     setTimeout(()=>{
+  //       Nav.style.transform = 'translate(0%)';
+  //     },100);
+  //     body.style.overflow = 'hidden';
+  //   }
+  // }
 }
 
 document.ontouchstart = (e) => {
@@ -67,10 +68,10 @@ document.ontouchend = (e) => {
   let swiperightBol = (ellapsedTime<=allowedTime && distance >= 40 && 
     Math.abs(touchobj.pageY - startY)<=100);
 
-  let swipeleftBol = (ellapsedTime <= allowedTime && (distance <= TotalFingerSwipeDist && distance != 0) &&
-    Math.abs(touchobj.pageY - startY) <=5);
+  // let swipeleftBol = (ellapsedTime <= allowedTime && (distance <= TotalFingerSwipeDist && distance != 0) &&
+  //   Math.abs(touchobj.pageY - startY) <=5);
   
-  swipe(swiperightBol,swipeleftBol);
+  swipe(swiperightBol);
 }
 
 var typed = new Typed("#pcodes", {
