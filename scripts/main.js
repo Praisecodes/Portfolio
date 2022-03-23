@@ -146,19 +146,24 @@ writeButton.addEventListener('click', ()=>{
   let NameValue = writeName.value + '%0A';
   let EmailValue = writeEmail.value + '%0A';
   let MessageContent = writeMessage.value;
-  //let newline = "\n";
-  
-  let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
+
+  if(NameValue == '%0A' || EmailValue == '%0A'){
+    alert("Please Fill in The Required Info");
+  }
+  else{
+    let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
                       
-  fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
-    method: "GET"
-  })
-  .then(success => {
-    alert('Message Sent');
-    writeName.value = '';
-    writeEmail.value ='';
-    writeMessage.value = '';
-  }, error =>{
-    alert('Error sending message!');
-  });
+    fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
+      method: "GET"
+    })
+    .then(success => {
+      alert('Message Sent');
+      writeName.value = '';
+      writeEmail.value ='';
+      writeMessage.value = '';
+    }, error =>{
+      alert('Error sending message!');
+    });
+  }
 });
+
