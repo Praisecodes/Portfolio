@@ -32,6 +32,27 @@ body{
     }
 }
 
+@keyframes comeIn{
+    0%{
+        transform: scale(0%);
+    }
+    90%{
+        transform: scale(110%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes goOut{
+    0%{
+        transform: scale(110%);
+    }
+    100%{
+        transform: scale(0%);
+    }
+}
+
 @keyframes fadeIn{
     0%{
         opacity: 0%;
@@ -50,6 +71,72 @@ body{
     }
 }
 
+.leaveScreen{
+    animation: goOut .5s;
+}
+
+.comeToScreen{
+    animation: comeIn .7s;
+}
+
+.successDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #111111aa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    display: none;
+    .successMessage{
+        position: relative;
+        width: 41rem;
+        height: 30rem;
+        background-color: #222222aa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image{
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50px;
+            border: 1px solid white;
+        }
+        .message{
+            h1, p{
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                .fa-circle-check{
+                    color: red;
+                    font-size: 40px;
+                }
+            }
+        }
+        .okay{
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            background-color: #111111aa;
+            border: none;
+            outline: none;
+            color: white;
+            width: 70px;
+            height: 50px;
+            transition: .5s;
+            cursor: pointer;
+            &:hover{
+                background-color: red;
+            }
+        }
+    }
+}
+
 .mobileNav{
     width: 100%;
     height: 100vh;
@@ -57,7 +144,7 @@ body{
     top: 0;
     left: 0;
     background-color: #11111133;
-    z-index: 2000;
+    z-index: 3000;
     display: none;
     animation: fadeIn .1s;
     .Nav{

@@ -13,6 +13,9 @@ const writeName = document.querySelector(".writeName");
 const writeEmail = document.querySelector(".writeEmail");
 const writeMessage = document.querySelector('.writeMessage');
 const writeButton =document.querySelector('.writeButton');
+const okay = document.querySelector(".okay");
+const successMessage = document.querySelector(".successMessage");
+const successDiv = document.querySelector(".successDiv");
 
 const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
 
@@ -142,6 +145,16 @@ close.addEventListener('click', () =>{
   body.style.overflow = 'auto';
 });
 
+okay.addEventListener('click', () => {
+  successMessage.classList.remove("comeToScreen");
+  successMessage.classList.add("leaveScreen");
+  setTimeout(()=>{
+    successDiv.style.display = 'none';
+    successMessage.classList.remove("leaveScreen");
+    successMessage.classList.add("comeToScreen");
+  }, 500);
+})
+
 writeButton.addEventListener('click', ()=>{
   let NameValue = writeName.value + '%0A';
   let EmailValue = writeEmail.value + '%0A';
@@ -162,7 +175,7 @@ writeButton.addEventListener('click', ()=>{
       method: "GET"
     })
     .then(success => {
-      alert('Message Sent');
+      successDiv.style.display = 'flex';
       writeName.value = '';
       writeEmail.value ='';
       writeMessage.value = '';
