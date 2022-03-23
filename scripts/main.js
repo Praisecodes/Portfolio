@@ -143,12 +143,12 @@ close.addEventListener('click', () =>{
 });
 
 writeButton.addEventListener('click', ()=>{
-  let NameValue = writeName.value;
-  let EmailValue = writeEmail.value;
+  let NameValue = writeName.value + '%0A';
+  let EmailValue = writeEmail.value + '%0A';
   let MessageContent = writeMessage.value;
   //let newline = "\n";
   
-  let FinalMessage = "From: " + NameValue + '\r\n' + "E-Mail: " + EmailValue + '\r\n' + "Message Body: " + MessageContent;
+  let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
                       
   fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
     method: "GET"
