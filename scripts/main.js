@@ -147,8 +147,11 @@ writeButton.addEventListener('click', ()=>{
   let EmailValue = writeEmail.value + '%0A';
   let MessageContent = writeMessage.value;
 
+  writeButton.innerHTML = "<i class='fa-solid fa-circle-notch'></i>";
+
   if(NameValue == '%0A' || EmailValue == '%0A'){
     alert("Please Fill in The Required Info");
+    writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
   }
   else{
     let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
@@ -161,6 +164,7 @@ writeButton.addEventListener('click', ()=>{
       writeName.value = '';
       writeEmail.value ='';
       writeMessage.value = '';
+      writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
     }, error =>{
       alert('Error sending message!');
     });

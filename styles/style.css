@@ -25,6 +25,28 @@ body {
   animation: fadeIn 2s;
 }
 
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0%;
@@ -585,6 +607,11 @@ body {
 
 .contact .formsDiv .write-a-message button:hover {
   background-color: #ff000088;
+}
+
+.contact .formsDiv .write-a-message button .fa-circle-notch {
+  -webkit-animation: rotate 3s infinite;
+          animation: rotate 3s infinite;
 }
 
 .contact .formsDiv h1 {

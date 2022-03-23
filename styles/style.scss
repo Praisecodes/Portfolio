@@ -23,6 +23,15 @@ body{
             animation: fadeIn 2s;
 }
 
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 @keyframes fadeIn{
     0%{
         opacity: 0%;
@@ -410,6 +419,9 @@ body{
                 transition: .5s;
                 &:hover{
                     background-color: #ff000088;
+                }
+                .fa-circle-notch{
+                    animation: rotate 3s infinite;
                 }
             }
         }
