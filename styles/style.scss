@@ -681,6 +681,9 @@ body{
                 margin: 30px 0;
             }
         }
+        .title{
+            font-size: 50px;
+        }
     }
     #landing{
         h1{
@@ -701,9 +704,9 @@ body{
             }
         }
     }
-    .contact{
-        .title{
-            font-size: 50px;
+    .successDiv{
+        .successMessage{
+            height: 40rem;
         }
     }
 }

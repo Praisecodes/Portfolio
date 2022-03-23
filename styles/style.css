@@ -982,6 +982,9 @@ body {
   .contact .formsDiv h1 {
     margin: 30px 0;
   }
+  .contact .title {
+    font-size: 50px;
+  }
   #landing h1 {
     font-size: 70px;
     margin: 0;
@@ -995,8 +998,8 @@ body {
   .tools .toolsList .icons {
     font-size: 3rem;
   }
-  .contact .title {
-    font-size: 50px;
+  .successDiv .successMessage {
+    height: 40rem;
   }
 }
 
