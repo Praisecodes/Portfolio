@@ -1001,6 +1001,9 @@ body {
   .successDiv .successMessage {
     height: 40rem;
   }
+  .NameEmpty p, .EmailEmpty p, .NoneAtAll p {
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 495px) {

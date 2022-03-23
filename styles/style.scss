@@ -709,6 +709,11 @@ body{
             height: 40rem;
         }
     }
+    .NameEmpty, .EmailEmpty, .NoneAtAll{
+        p{
+            height: 50px;
+        }
+    }
 }
 
 @media screen and (max-width: 495px){
