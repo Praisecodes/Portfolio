@@ -16,6 +16,18 @@
     <script src="./scripts/typed.js"></script>
 </head>
 <body>
+    <div class="NameEmpty">
+        <p class="NameError comeToScreen">Name Is Required!!</p>
+    </div>
+
+    <div class="EmailEmpty">
+        <p class="EmailError comeToScreen">No Email No Response!!</p>
+    </div>
+
+    <div class="NoneAtAll">
+        <p class="NoneError comeToScreen">Yo!! All The Required Spaces Are Left Out</p>
+    </div>
+
     <div class="successDiv">
         <div class="successMessage comeToScreen">
             <div class="image">
@@ -152,7 +164,7 @@
             </div>
             <h1>OR</h1>
             <div class="leave-a-review">
-                <input type="email" placeholder="Your Email">
+                <input type="email" placeholder="Your Email (*required)" required>
                 <textarea placeholder="Leave A Review"></textarea>
                 <button>
                     Leave A Review <i class="fa-solid fa-comment"></i>

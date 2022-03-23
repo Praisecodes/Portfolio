@@ -16,6 +16,12 @@ const writeButton =document.querySelector('.writeButton');
 const okay = document.querySelector(".okay");
 const successMessage = document.querySelector(".successMessage");
 const successDiv = document.querySelector(".successDiv");
+const NameEmpty = document.querySelector(".NameEmpty");
+const EmailEmpty = document.querySelector(".EmailEmpty");
+const NameError = document.querySelector(".NameError");
+const EmailError = document.querySelector(".EmailError");
+const NoneAtAll = document.querySelector(".NoneAtAll");
+const NoneError = document.querySelector(".NoneError");
 
 const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
 
@@ -163,10 +169,47 @@ writeButton.addEventListener('click', ()=>{
   writeButton.style.fontSize = '25px';
   writeButton.innerHTML = "<i class='fa-solid fa-circle-notch'></i>";
 
-  if(NameValue == '%0A' || EmailValue == '%0A'){
-    alert("Please Fill in The Required Info");
+  if(NameValue == '%0A' && EmailValue == '%0A'){
+    NoneAtAll.style.display = "flex";
     writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
     writeButton.style.fontSize = '18px';
+    setTimeout(()=>{
+      NoneError.classList.remove("comeToScreen");
+      NoneError.classList.add("leaveScreen");
+      setTimeout(()=>{
+        NoneAtAll.style.display = 'none';
+        NoneError.classList.remove("leaveScreen");
+        NoneError.classList.add("comeToScreen");
+      },500);
+    },2000);
+  }
+  else if(EmailValue == '%0A'){
+    EmailEmpty.style.display = "flex";
+    writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+    writeButton.style.fontSize = '18px';
+    setTimeout(()=>{
+      EmailError.classList.remove("comeToScreen");
+      EmailError.classList.add("leaveScreen");
+      setTimeout(()=>{
+        EmailEmpty.style.display = 'none';
+        EmailError.classList.remove("leaveScreen");
+        EmailError.classList.add("comeToScreen");
+      },500);
+    },2000);
+  }
+  else if(NameValue == '%0A'){
+    NameEmpty.style.display = "flex";
+    writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+    writeButton.style.fontSize = '18px';
+    setTimeout(()=>{
+      NameError.classList.remove("comeToScreen");
+      NameError.classList.add("leaveScreen");
+      setTimeout(()=>{
+        NameEmpty.style.display = 'none';
+        NameError.classList.remove("leaveScreen");
+        NameError.classList.add("comeToScreen");
+      },500);
+    },2000);
   }
   else{
     let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
