@@ -705,17 +705,12 @@ body {
           justify-content: center;
   text-align: center;
   overflow: hidden;
+  padding: 30px;
 }
 
 .tools .toolsList .icons {
-  margin: 20px 0 20px 30px;
+  padding: 15px 20px;
   font-size: 3.6rem;
-}
-
-.tools .toolsList .si-cplusplus {
-  font-size: 3.6rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .contact {
@@ -1072,7 +1067,7 @@ body {
   }
   .contact .title {
     letter-spacing: 0;
-    font-size: 45px;
+    font-size: 40px;
   }
   .contact .formsDiv .write-a-message input, .contact .formsDiv .leave-a-review input {
     width: 300px;
@@ -1082,6 +1077,45 @@ body {
   }
   .contact .socialDiv ul li a .social {
     font-size: 25px;
+  }
+  .tools h1 {
+    font-size: 40px;
+  }
+  .tools .toolsList .icons {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  #landing h1 {
+    font-size: 40px;
+  }
+  #landing p {
+    font-size: 14px;
+  }
+  #about #NgPro img {
+    width: 170px;
+    height: 150px;
+  }
+  #about #NgPro h2 {
+    font-size: 16px;
+  }
+  #about #NgPro h2 span {
+    font-size: 11px;
+  }
+  #about #OpenSource h2, #about #desktop h2 {
+    font-size: 16px;
+  }
+  #about #OpenSource h2 span, #about #desktop h2 span {
+    font-size: 11px;
+  }
+  #about #OpenSource .fa-code-commit {
+    width: 160px;
+    height: 160px;
+  }
+  #about #desktop .fa-laptop-code {
+    width: 160px;
+    height: 160px;
   }
 }
 /*# sourceMappingURL=style.css.map */

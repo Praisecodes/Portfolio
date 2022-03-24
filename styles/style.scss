@@ -468,14 +468,10 @@ body{
         justify-content: center;
         text-align: center;
         overflow: hidden;
+        padding: 30px;
         .icons{
-            margin: 20px 0 20px 30px;
+            padding: 15px 20px;
             font-size: 3.6rem;
-        }
-        .si-cplusplus{
-            font-size: 3.6rem;
-            margin-top: 20px;
-            margin-bottom: 20px;
         }
     }
 }
@@ -788,7 +784,7 @@ body{
     .contact{
         .title{
             letter-spacing: 0;
-            font-size: 45px;
+            font-size: 40px;
         }
         .formsDiv{
             .write-a-message, .leave-a-review{
@@ -809,6 +805,64 @@ body{
                         }
                     }
                 }
+            }
+        }
+    }
+
+    .tools{
+        h1{
+            font-size: 40px;
+        }
+        .toolsList{
+            .icons{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 355px){
+    #landing{
+        h1{
+            font-size: 40px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+
+    #about{
+        #NgPro{
+            img{
+                width: 170px;
+                height: 150px;
+            }
+            h2{
+                font-size: 16px;
+                span{
+                    font-size: 11px;
+                }
+            }
+        }
+
+        #OpenSource, #desktop{
+            h2{
+                font-size: 16px;
+                span{
+                    font-size: 11px;
+                }
+            }
+        }
+        #OpenSource{
+            .fa-code-commit{
+                width: 160px;
+                height: 160px;
+            }
+        }
+        #desktop{
+            .fa-laptop-code{
+                width: 160px;
+                height: 160px;
             }
         }
     }
