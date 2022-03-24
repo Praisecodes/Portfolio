@@ -1019,8 +1019,8 @@ body {
     font-size: 3rem;
   }
   .successDiv .successMessage {
-    height: 40rem;
-    width: 35rem;
+    height: 35rem;
+    width: 25rem;
   }
   .NameEmpty p, .EmailEmpty p, .NoneAtAll p {
     height: 50px;
