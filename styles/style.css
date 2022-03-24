@@ -117,6 +117,28 @@ body {
   }
 }
 
+@-webkit-keyframes glow {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-transform: scale(100%);
+            transform: scale(100%);
+  }
+  100% {
+    -webkit-transform: scale(110%);
+            transform: scale(110%);
+  }
+}
+
 .leaveScreen {
   -webkit-animation: goOut .5s;
           animation: goOut .5s;
@@ -248,6 +270,8 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   cursor: pointer;
+  -webkit-animation: glow 1.4s infinite;
+          animation: glow 1.4s infinite;
 }
 
 .successDiv .successMessage .okay:hover {
@@ -1000,7 +1024,7 @@ body {
   }
   .successDiv .successMessage {
     height: 40rem;
-    width: 25rem;
+    width: 35rem;
   }
   .NameEmpty p, .EmailEmpty p, .NoneAtAll p {
     height: 50px;
