@@ -172,7 +172,7 @@ body {
 .NameEmpty p, .EmailEmpty p, .NoneAtAll p {
   background-color: red;
   width: 20rem;
-  height: 80%;
+  height: 60%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,6 +183,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px;
 }
 
 .NameEmpty .NoneError, .EmailEmpty .NoneError, .NoneAtAll .NoneError {
