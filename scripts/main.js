@@ -243,7 +243,7 @@ writeButton.addEventListener('click', ()=>{
     // });
 
 
-    fetch("https://sendpraisecodesemail.herokuapp.com", {
+    fetch("https://sendpraisecodesemail.herokuapp.com/index.php", {
       method: "POST",
       headers:{
         "Content-Type": "application/json"
