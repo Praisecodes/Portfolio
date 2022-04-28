@@ -23,9 +23,9 @@ const EmailError = document.querySelector(".EmailError");
 const NoneAtAll = document.querySelector(".NoneAtAll");
 const NoneError = document.querySelector(".NoneError");
 
-const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
+// const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
 
-const chatID = `1967738166`;
+// const chatID = `1967738166`;
 
 let startY, startX, TotalFingerSwipeDist = 200, allowedTime = 3000, distance, ellapsedTime, startTime;
 
@@ -163,14 +163,16 @@ okay.addEventListener('click', () => {
 })
 
 writeButton.addEventListener('click', ()=>{
-  let NameValue = writeName.value + '%0A';
-  let EmailValue = writeEmail.value + '%0A';
+  let NameValue = writeName.value;
+  let EmailValue = writeEmail.value;
   let MessageContent = writeMessage.value;
+
+  let mainMessageContent = MessageContent.split("\n").join("<br/>");
 
   writeButton.style.fontSize = '25px';
   writeButton.innerHTML = "<i class='fa-solid fa-circle-notch'></i>";
 
-  if(NameValue == '%0A' && EmailValue == '%0A'){
+  if(NameValue == "" && EmailValue == ""){
     NoneAtAll.style.display = "flex";
     writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
     writeButton.style.fontSize = '18px';
@@ -184,7 +186,7 @@ writeButton.addEventListener('click', ()=>{
       },500);
     },2000);
   }
-  else if(EmailValue == '%0A'){
+  else if(EmailValue == ""){
     EmailEmpty.style.display = "flex";
     writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
     writeButton.style.fontSize = '18px';
@@ -198,7 +200,7 @@ writeButton.addEventListener('click', ()=>{
       },500);
     },2000);
   }
-  else if(NameValue == '%0A'){
+  else if(NameValue == ""){
     NameEmpty.style.display = "flex";
     writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
     writeButton.style.fontSize = '18px';
@@ -213,19 +215,64 @@ writeButton.addEventListener('click', ()=>{
     },2000);
   }
   else{
-    let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
+    // let FinalMessage = `From: ${NameValue}%0AE-Mail: ${EmailValue}%0AMessage Body:%0A${MessageContent}`;
+
+    let messageContents = {
+      "Name": NameValue,
+      "Email": EmailValue,
+      "Body": mainMessageContent
+    };
                       
-    fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
-      method: "GET"
+    // fetch("https://api.telegram.org/bot"+Token+"/sendmessage?chat_id="+chatID+"&text="+FinalMessage, {
+    //   method: "GET"
+    // })
+    // .then(success => {
+    //   successDiv.style.display = 'flex';
+    //   writeName.value = '';
+    //   writeEmail.value ='';
+    //   writeMessage.value = '';
+    //   writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+    //   writeButton.style.fontSize = '18px';
+    // }, error =>{
+    //   alert('Error sending message!');
+    //   writeName.value = '';
+    //   writeEmail.value ='';
+    //   writeMessage.value = '';
+    //   writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+    //   writeButton.style.fontSize = '18px';
+    // });
+
+
+    fetch("https://sendpraisecodesemail.herokuapp.com", {
+      method: "POST",
+      headers:{
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(messageContents)
     })
-    .then(success => {
-      successDiv.style.display = 'flex';
-      writeName.value = '';
-      writeEmail.value ='';
-      writeMessage.value = '';
-      writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
-      writeButton.style.fontSize = '18px';
-    }, error =>{
+    .then(res=>res.json())
+    .then((data)=>{
+      if(data == "Success"){
+        successDiv.style.display = 'flex';
+        writeName.value = '';
+        writeEmail.value ='';
+        writeMessage.value = '';
+        writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+        writeButton.style.fontSize = '18px';
+      }
+      else{
+        alert('Error sending message!');
+        writeName.value = '';
+        writeEmail.value ='';
+        writeMessage.value = '';
+        writeButton.innerHTML = "Send A Message <i class='fa-solid fa-paper-plane'></i>";
+        writeButton.style.fontSize = '18px';
+
+        console.log(data);
+      }
+    })
+    .catch((error)=>{
+      console.log(error);
       alert('Error sending message!');
       writeName.value = '';
       writeEmail.value ='';
