@@ -22,6 +22,7 @@ const NameError = document.querySelector(".NameError");
 const EmailError = document.querySelector(".EmailError");
 const NoneAtAll = document.querySelector(".NoneAtAll");
 const NoneError = document.querySelector(".NoneError");
+const WriteAMessage = document.querySelector(".write-a-message");
 
 // const Token = `5162915549:AAEYnwZGrgUdH67Z5-UpDBk0Rl2d9x79WMo`;
 
@@ -162,7 +163,8 @@ okay.addEventListener('click', () => {
   }, 500);
 })
 
-writeButton.addEventListener('click', ()=>{
+WriteAMessage.addEventListener('submit', (e)=>{
+  e.preventDefault();
   let NameValue = writeName.value;
   let EmailValue = writeEmail.value;
   let MessageContent = writeMessage.value;
